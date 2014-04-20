@@ -1,0 +1,22 @@
+{
+    "name": "flip",
+    "title": "jQuery Flip plugin",
+    "description": "",
+    "version": "1.0.1",
+    "author": {
+        "name": "Jong-Ha Ahn",
+        "email": "jongha.ahn@mrlatte.net",
+        "url": "http://www.mrlatte.net"
+    },
+    "dependencies": {
+        "jquery": ">=1.7.0"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/jongha/jquery-flip/blob/master/LICENSE"}
+    ],
+    "keywords": ["div", "flip"],
+    "bugs": "https://github.com/jongha/jquery-flip/issues",
+    "homepage": "https://github.com/jongha/jquery-flip",
+    "docs": "https://github.com/jongha/jquery-flip"
+}

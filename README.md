@@ -1,2 +1,1 @@
-jquery-flip
-===========
+# jquery-flip
