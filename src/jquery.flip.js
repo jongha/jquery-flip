@@ -7,7 +7,8 @@
 			"transition": function(interval) { return "all " + ((interval) ? (interval / 1000) : 0) + "s ease-in-out"; },
 			"transform": function(back) { return (!!back) ? "scaleX(-1)" : "scaleX(1)"; },
 			"front": ".flip-front",
-			"back": ".flip-back"
+			"back": ".flip-back",
+			"event": (options && options.event) || ["click"] // ["click"], ["mouseover", "mouseout"]
 		}, options);
 
 		options = $.extend(settings, options);
@@ -22,11 +23,7 @@
 			);
 		};
 
-		$(this).each(function() {
-			setTransition($(this), interval).find(options.back).hide();
-		});
-
-		$(this).bind("click", function() {
+    var eventHandler = function() {
 			var condition = $(this).data("flip");
 
 			setTransition($(this), interval).css(
@@ -60,7 +57,15 @@
 
 				}, interval);
 			})($(this), condition);
+		};
+
+		$(this).each(function() {
+			setTransition($(this), interval).find(options.back).hide();
 		});
+
+    for(var idx in settings.event) {
+			$(this).bind(settings.event[idx], eventHandler);
+		}
 
 		return this;
 	};

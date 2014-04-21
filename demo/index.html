@@ -16,36 +16,83 @@
 	<div class="container">
 		<h1>jQuery Flip plugin Demo</h1>
 		<hr />
-		
+
+		<h2>Click</h2>
+		<hr />
 		<div class="col-sm-2">
-			<div class="flip bg-primary">
+			<div class="flip flip-click bg-primary">
 				<div class="flip-front">card1</div>
 				<div class="flip-back">card1-back</div>
 			</div>
 		</div>
 		<div class="col-sm-2">
-			<div class="flip bg-success">
+			<div class="flip flip-click bg-success">
 				<div class="flip-front">card2</div>
 				<div class="flip-back">card2-back</div>
 			</div>
 		</div>
 		<div class="col-sm-2">
-			<div class="flip bg-info">
+			<div class="flip flip-click bg-info">
 				<div class="flip-front">card3</div>
 				<div class="flip-back">card3-back</div>
 			</div>
 		</div>
 		<div class="col-sm-2">
-			<div class="flip bg-warning">
+			<div class="flip flip-click bg-warning">
 				<div class="flip-front">card4</div>
 				<div class="flip-back">card4-back</div>
 			</div>
 		</div>
-
 		<div class="col-sm-2">
-			<div class="flip bg-danger">
+			<div class="flip flip-click bg-danger">
 				<div class="flip-front">card5</div>
 				<div class="flip-back">card5-back</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="flip flip-click bg-primary">
+				<div class="flip-front">card6</div>
+				<div class="flip-back">card6-back</div>
+			</div>
+		</div>
+    <div class="clearfix"></div>
+
+		<h2>MouseOver and MouseOut</h2>
+		<hr />
+		<div class="col-sm-2">
+			<div class="flip flip-mouseover bg-primary">
+				<div class="flip-front">card1</div>
+				<div class="flip-back">card1-back</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="flip flip-mouseover bg-success">
+				<div class="flip-front">card2</div>
+				<div class="flip-back">card2-back</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="flip flip-mouseover bg-info">
+				<div class="flip-front">card3</div>
+				<div class="flip-back">card3-back</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="flip flip-mouseover bg-warning">
+				<div class="flip-front">card4</div>
+				<div class="flip-back">card4-back</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="flip flip-mouseover bg-danger">
+				<div class="flip-front">card5</div>
+				<div class="flip-back">card5-back</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="flip flip-mouseover bg-primary">
+				<div class="flip-front">card6</div>
+				<div class="flip-back">card6-back</div>
 			</div>
 		</div>
 
@@ -53,7 +100,8 @@
 		<script type="text/javascript" src="../src/jquery.flip.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$(".flip").flip();
+				$(".flip-click").flip();
+				$(".flip-mouseover").flip({ event: ["mouseover", "mouseout"] });
 			});
 		</script>
 	</div>
